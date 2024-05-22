@@ -4,11 +4,12 @@
 <br>
 
 # Quem sou eu?
-#### Sou o Douglas, um aluno da Fatec de Sjc, que está atualmente cursando o 3 Semestre de Desenvolvimento de Software Multiplataforma
+#### Sou o Douglas Ferrini Medeiros, um aluno da Fatec de Sjc, que está atualmente cursando o 3 Semestre de Desenvolvimento de Software Multiplataforma
 
 <br>
 
 # Resumo das Propostas das Atividades
+*Para acessar o código de cada atividade, basta acessar a branch referente a atividade
 
 ## ATV I
 
