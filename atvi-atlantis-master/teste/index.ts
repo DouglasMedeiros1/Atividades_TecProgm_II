@@ -1,37 +1,86 @@
+const prompt = require('prompt-sync')();
 import Cliente from "../modelos/cliente";
+import Cadastrar from "../operacoes/cadastro";
+import Listagem from "../operacoes/listagem";
 import Endereco from "../modelos/endereco";
 import Telefone from "../modelos/telefone";
 
+let opcao = 10;
+const clientes: Cliente[] = [];
 let cliente = new Cliente()
-cliente.nome = `Pedro de Alcântara João Carlos Leopoldo Salvador`
-cliente.nomeSocial = `Dom Pedro II`
-cliente.dataCadastro = new Date(1840, 6, 23)
-cliente.dataNascimento = new Date(1825, 11, 2)
-let endereco = new Endereco()
-endereco.rua = `R. do Catete`
-endereco.bairro = `Copacabana`
-endereco.cidade = `Rio de Janeiro`
-endereco.estado = `Rio de Janeiro`
-endereco.pais = `Brasil`
-endereco.codigoPostal = `22220-000`
-cliente.endereco = endereco
-let telefone = new Telefone()
-telefone.ddd = `21`
-telefone.numero = `2222-2222`
-cliente.telefones.push(telefone)
-telefone.ddd = `22`
-telefone.numero = `3333-3333`
-cliente.telefones.push(telefone)
 
-let dependente = new Cliente()
-dependente.nome = `Isabel Cristina Leopoldina Augusta Micaela`
-dependente.nomeSocial = `Princesa Isabel`
-dependente.dataCadastro = new Date(1921, 10, 14)
-dependente.dataNascimento = new Date(1846, 6, 29)
-dependente.endereco = (cliente.endereco.clonar() as Endereco)
-dependente.telefones = (cliente.telefones as Telefone[])
-dependente.titular = cliente
-cliente.dependentes.push(dependente)
+function CadatroInicial(): void {
+    cliente.nome = `Pedro de Alcântara João Carlos Leopoldo Salvador`
+    cliente.nomeSocial = `Dom Pedro II`
+    cliente.dataCadastro = new Date(1840, 6, 23)
+    cliente.dataNascimento = new Date(1825, 11, 2)
+    cliente.titular = cliente
 
-console.log(cliente);
-console.log(dependente);
+    let endereco = new Endereco()
+    endereco.rua = `R. do Catete`
+    endereco.bairro = `Copacabana`
+    endereco.cidade = `Rio de Janeiro`
+    endereco.estado = `Rio de Janeiro`
+    endereco.pais = `Brasil`
+    endereco.codigoPostal = `22220-000`
+    cliente.endereco = endereco
+
+    let telefone = new Telefone();
+    telefone.ddd = "21";
+    telefone.numero = "2222-3333";
+    cliente.telefones.push(telefone);
+    let telefones = new Telefone();
+    telefones.ddd = "22";
+    telefones.numero = "2222-4444";
+    cliente.telefones.push(telefones);
+
+    let dependente = new Cliente()
+    dependente.nome = `Isabel Cristina Leopoldina Augusta Micaela`
+    dependente.nomeSocial = `Princesa Isabel`
+    dependente.dataCadastro = new Date(1921, 10, 14)
+    dependente.dataNascimento = new Date(1846, 6, 29)
+    dependente.endereco = (cliente.endereco.clonar() as Endereco)
+    dependente.telefones = (cliente.telefones.map(telefones => telefones.clonar()) as Telefone[])
+    dependente.titular = cliente
+    cliente.dependentes.push(dependente)
+
+    
+    clientes.push(cliente);
+}
+
+CadatroInicial();
+
+while (opcao !== 9) {
+        console.log("\n\nEscolha uma funcionalidade do sistema: \n  1 - Cadastrar cliente \n  2 - Listar cliente \n  9 - Sair \n ----------");
+        opcao = Number(prompt("Escolha uma opção: "));
+
+    if (opcao === 1) {
+        Cadastrar(clientes);
+        
+
+    } else if (opcao === 2) {
+        
+        
+        console.log("\n-----Listagem de Clientes: ");
+        Listagem(clientes);
+        // console.log(Cliente[1]);
+        
+
+        console.log("\n-----Listagem de Dependentes: ");
+        let clientesTotais = clientes.length;
+        for (let index = 0; index < clientesTotais; index++) {
+            Listagem(clientes[index].dependentes);
+        }
+
+        // Listagem(cliente.dependentes);
+        // console.log(cliente.dependentes)
+
+        
+    } else if (opcao === 9) {
+        console.log("\n Saindo do sistema. Até a próxima!\n");
+    } else {
+        console.log("Opção inválida");
+    }
+}
+
+
