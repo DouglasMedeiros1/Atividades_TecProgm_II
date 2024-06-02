@@ -1,6 +1,22 @@
 
 # ATV I
 
+## Como rodar?
+
+Primeiramente entre na pasta: atvi-atlantis-master ,<br>
+Em seguida abra o cmd (prompt de Comando) e digite os seguintes comandos: 
+
+```
+npm install typescript
+```
+
+```
+npx tsc
+```
+
+```
+node .\js\teste\index.js
+```
 
 ## Proposta da Atividade
 
