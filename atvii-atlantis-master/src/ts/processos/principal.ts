@@ -1,6 +1,6 @@
 import Processo from "../abstracoes/processo"
 import MenuPrincipal from "../menus/menuPricipal"
-import DeletarCliente from "./deletarCliente"
+import DeletarCliente from "./deletar/deletarCliente"
 import TipoCadastroCliente from "./tipoCadastroCliente"
 import TipoListagemClientes from "./tipoListagemClientes"
 

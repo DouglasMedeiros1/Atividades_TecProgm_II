@@ -4,8 +4,7 @@ import ImpressorDocumentos from "./impressorDocumentos";
 import ImpressorEndereco from "./impressorEndereco";
 import ImpressorTelefone from "./impressorTelefone";
 
-
-export default class ImpressorCliente implements Impressor {
+export default class ImpressorDependente implements Impressor {
     private cliente: Cliente
     private impressor!: Impressor
 
@@ -19,7 +18,7 @@ export default class ImpressorCliente implements Impressor {
             + `| Nome social: ${this.cliente.NomeSocial}\n`
             + `| Data de nascimento: ${this.cliente.DataNascimento.toLocaleDateString()}\n`
             + `| Data de cadastro: ${this.cliente.DataCadastro.toLocaleDateString()}\n`
-            + `| Dependentes: ${this.cliente.Dependentes.length}\n`
+            + `| Titular: ${this.cliente.Titular?.Nome}\n`
 
         this.impressor = new ImpressorEndereco(this.cliente.Endereco)
         impressao = impressao + `\n${this.impressor.imprimir()}`
