@@ -4,7 +4,6 @@ import ImpressorCliente from "../../impressores/impressorCliente";
 import ImpressorDependente from "../../impressores/impressorDependente";
 import Impressor from "../../interfaces/impressor";
 import Cliente from "../../modelos/cliente";
-const prompt = require('prompt-sync')();
 
 export default class ListagemTodosDependentes extends Processo {
     private clientes: Cliente[];

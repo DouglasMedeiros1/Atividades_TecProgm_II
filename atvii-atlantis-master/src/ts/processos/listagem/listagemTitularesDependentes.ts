@@ -17,9 +17,10 @@ export default class ListagemTitularesDependentes extends Processo {
     processar(): void {
         console.clear();
         console.log('Iniciando a listagem dos titulares...');
-
+        console.log('Digite o nome do dependente para listar os titulares:');
         
-        const nomeDependente = this.entrada.receberTexto('Digite o nome do dependente para listar os titulares:');
+        
+        const nomeDependente = this.entrada.receberTexto('Qual a opção desejada? ');
         const titularesComDependente = this.clientes.filter(cliente => 
             cliente.Dependentes && cliente.Dependentes.some(dependente => dependente.Nome === nomeDependente)
         );

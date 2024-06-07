@@ -34,5 +34,10 @@ export default class Cliente {
     public set Telefones(telefones: Telefone[]) { this.telefones = telefones; }
     public set Titular(titular: Cliente) { this.titular = titular }
     
+    public set Nome(nome: string) { this.nome = nome }
+    public set NomeSocial(nomeSocial: string) { this.nomeSocial = nomeSocial }
+    public set DataNascimento(dataNascimento: Date) { this.dataNascimento = dataNascimento }
+    public set Documentos(documentos: Documento[]) { this.documentos = documentos }
+    public set Dependentes(dependentes: Cliente[]) { this.dependentes = dependentes }
     
 }

@@ -4,7 +4,6 @@ import ImpressorCliente from "../../impressores/impressorCliente";
 import ImpressorDependente from "../../impressores/impressorDependente";
 import Impressor from "../../interfaces/impressor";
 import Cliente from "../../modelos/cliente";
-const prompt = require('prompt-sync')();
 
 export default class ListagemDependentesTitular extends Processo {
     private clientes: Cliente[];
@@ -18,9 +17,10 @@ export default class ListagemDependentesTitular extends Processo {
     processar(): void {
         console.clear();
         console.log('Iniciando a listagem dos dependentes...');
-
+        console.log('Digite o nome do titular para listar os dependentes:');
         
-        const nomeTitular = prompt('Digite o nome do titular para listar os dependentes:');
+        
+        const nomeTitular = this.entrada.receberTexto('Qual a opção desejada? ');
         const clienteTitular = this.clientes.find(cliente => cliente.Nome === nomeTitular);
 
         if (clienteTitular) {
