@@ -2,6 +2,27 @@
 # ATV II
 
 
+## Como rodar?
+
+Primeiramente entre nas pastas: 
+ - atvi-atlantis-master ,<br>
+   - src
+
+Em seguida abra o cmd (prompt de Comando) e digite os seguintes comandos: 
+
+```
+npm install typescript
+```
+
+```
+npx tsc
+```
+
+```
+node .\js\app\app.js
+```
+<br>
+
 ## Proposta da Atividade
 
 Contextualização:
