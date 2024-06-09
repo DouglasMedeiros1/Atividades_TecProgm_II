@@ -1,5 +1,5 @@
 
-# ATV I
+# ATV III
 
 ## Como rodar?
 
@@ -15,101 +15,116 @@ npx tsc
 ```
 
 ```
-node .\js\teste\index.js
+
 ```
 
 ## Proposta da Atividade
 
 Contextualização:
-O ramo de parques aquáticos é um mercado em expansão no mundo e o Brasil também faz parte 
-disto. No Brasil estima-se que o setor fatura R$ 3 bilhões por ano, com 30 milhões de visitantes 
-e gera 15 mil empregos diretos e 100 mil indiretos, dados de 2020.
 
+Existem várias atividades empresariais voltadas para hospedagem e entretenimento. Como 
+exemplo tem-se os hotéis, pousadas e resorts. Contudo, algo se destaca, principalmente no
+exterior, são os resorts. 
 <br>
-
-A Themed Entertainment Association (TEA), associação internacional do segmento, apontou que 
-em 2020 o total de visitantes nos grandes parques do mundo ultrapassou, pela primeira vez, 
-meio bilhão de visitantes, isto é quase 7% da população mundial.
-
+ 
+Um resort é uma estrutura de hospedagem pensada para ser um centro de férias ou estação 
+turística. É um lugar usado para relaxamento ou recreação, geralmente situado fora de um 
+centro urbano com áreas não edificadas de terreno, voltados especialmente para atividades de 
+lazer e entretenimento dos hóspedes. As pessoas procuram um resort para passar feriados ou 
+férias. 
 <br>
-
-O destaque sobre os parques aquáticos no Brasil é grande, o país é predominantemente quente, 
-visitar parques aquáticos é uma das melhores maneiras de enfrentar o calor e, ainda, se divertir 
-bastante. Por isso, esse é um destino procurado por muitas famílias e traz muito mais atrações 
-que as tradicionais piscinas e toboáguas.
-
+ 
+Existem alguns exemplos famosos de resorts. Cidades em que o turismo é a principal atividade 
+econômica por exemplo Aspen e Colorado. Centros de férias, normalmente dirigidos por uma 
+única companhia, que tenta proporcionar para a maioria das pessoas o que elas querem 
+enquanto elas estão lá, por exemplo Walt Disney World Resort. 
 <br>
-
-Há vários parques famosos no Brasil, um deles é o Beach Park, de Fortaleza, no Ceará. O Beach 
-Park talvez seja um dos parques aquáticos mais conhecidos do Brasil. Além disso, é considerado 
-o maior da América Latina, são mais de 20.000 metros quadrados de extensão.
-
+ 
+Às vezes o termo resort é usado erroneamente para se referir a um hotel, que não tem todos os 
+requisitos de um resort. De qualquer modo, um hotel possui as principais características de um 
+resort. Outra diferença que se pode ressaltar entre hotel e resort, é que um resort proporciona 
+diversas opções de lazer para seus hóspedes, já o foco de um hotel é oferecer apenas a estadia. 
 <br>
-
-Outros atrativos do Beack Park são seus resorts, praias particulares, piscinas com correnteza, 
-cabanas para relaxar e saunas. Fora da água, o parque oferta diversos restaurantes, que servem 
-os mais variados tipos de refeições — desde pizza a comida caseira.
-
+ 
+Assim como em um hotel, nos resorts seus hóspedes têm livre permanência por todos os seus 
+ambientes, porém, diferentemente daqueles, pois, na maioria das vezes, não há necessidade de 
+adquirir pacotes adicionais. O preço da estadia engloba tudo o que o resort oferece. Trata-se de 
+um misto da comodidade de um clube com o prazer de um hotel. 
 <br>
-
-Outro parque aquático famoso é o Thermas dos Laranjais, que fica em São Paulo, na cidade de 
-Olímpia. Este parque foi considerado o quarto parque aquático mais visitado do mundo, em 
-2014.
-
-<br>
-
-Além das suas atrações, o Thermas dos Laranjais possui uma localização privilegiada, o parque 
-fica a cerca de 30 minutos do aeroporto de São José do Rio preto.
-Dado o conteúdo supra exposto, não é difícil pensar que administrar um parque aquático exige 
-muito trabalho e as melhores ferramentas de gestão, as melhores tecnologias. Portanto, a 
-expansão deste tipo de negócio instigou a abertura de empresas de tecnologia da informação, 
-especializadas na gestão de parques, clubes ou hotéis.
-
-<br>
-
+ 
 ### Atividade:
-
+O sistema Atlantis está cada vez melhor, graças ao empenho do time de desenvolvimento. 
+Contudo, você recebeu duas negativas, por duas vezes dois possíveis clientes não aceitaram seu 
+software como um produto mínimo viável para uso. Isto aconteceu porque a implementação
+não contempla coisas importantes, dentre elas uma forma de cadastro e gerenciamento de 
+hospedagens. 
 <br>
-
-Você é um empreendedor, muito atento as tendencias de mercado e percebeu a crescente dos 
-parques aquáticos.
-
+ 
+Por sorte, as negativas foram claras, trouxeram as repostas necessárias para melhorar o 
+software. A partir disto, você solicitou ao time de desenvolvimento de software novas 
+implementações para melhorar o sistema. 
 <br>
-
-Existem muitos softwares disponíveis para auxiliar proprietários ou grupos empresariais na 
-gestão do seu negócio, mas a maioria é caro demais e com limitações. Portanto você decidiu 
-criar uma empresa, com novas ideias e propostas melhores, a Ocean Solutions.
-
-<br>  
-
-Depois de muito pensar, debater e ouvir seus consultores, decidiu-se pelo desenvolvimento de 
-um sistema novo, batizado de Atlantis, uma homenagem a cidade de Atlântida.
-
+ 
+Seus engenheiros de software iniciaram as atualizações e uma das principais diferenças foi 
+incluir uma classe denominada de “Acomodações”. Esta classe foi pensada para representar 
+qualquer tipo de acomodação em um hotel, pousada ou resort. 
 <br>
-
-O Atlantis está em sua faze de concepção, comumente chamada de minimum viable product 
-(MVP). O MVP é uma estratégia, que visa construir um sistema pequeno e simples por primeiro, 
-para testar se a solução terá ou não sucesso antes de partir para uma escala maior. O importante 
-neste ponto é que você não é apenas o fundador da Ocean Solutions, também é um dos 
-engenheiros de software e desenvolvedor do Atlantis.
-
+ 
+Existem várias configurações para uma acomodação como: possui ou não camas de solteiro, 
+possui suítes e se há garagens. Por causa desta variação de configurações, seus engenheiros 
+entenderam que deveriam utilizar o padrão de projeto “Builder” para implementar construtores 
+de acomodações. A estrutura em software desenvolvida por eles está representada pelo 
+diagrama de classe na Figura 1. 
 <br>
-
-A primeira proposta do Atlantis é que ele seja um sistema generalista, para gerenciar parques 
-aquáticos, clubes e hotéis. Portanto, decidiu-se criar um primeiro módulo para ele, um que sirva 
-para cadastrar clientes e seus dependentes.
-
+ 
+Figura 1. Padrão de projeto Builder aplicado. 
 <br>
-
-Um cliente é uma pessoa, que irá usufruir dos serviços do parque, clube ou hotel. Contudo, o 
-cliente pode trazer consigo convidados, que estarão com ele durante sua estadia. Estes 
-convidados são de responsabilidade do cliente e serão cadastrados como dependentes. Como 
-todo dependente tem um responsável, os dados de endereço e telefones do dependente devem 
-ser iguais aos dados do responsável.
-
+ 
+Pelo diagrama, apresentado na Figura 1, evidencia-se a classe Acomodação e seus atributos e 
+métodos. Além disso, outras classes são definidas, uma denominada de “Diretor” e outra 
+denominada “ConstrutorAcomodação” – estas classes compõe a implementação do padrão de 
+projeto Builder, que foi aplicada no contexto do sistema. 
 <br>
+ 
+A mesma equipe de marketing e vendas, que recebeu as duas respostas negativas dos clientes, 
+elaborou uma tabela que defini quais são as melhores opções de acomodações para que o 
+software se torne um produto mínimo viável. Estas definições estão descritas na Tabela 1. 
+<br>
+ 
+Tabela 1. Definições de acomodações. 
+<br>
+ 
 
-Depois de discutir sobre esta questão com sua equipe de desenvolvimento, a opção escolhida 
-para implementar este comportamento no sistema foi aplicar o padrão de projeto denominado 
-de protótipo. O módulo criado pela equipe de desenvolvimento seguiu o diagrama de classe da 
-Figura 1.
+Na Tabela 1, é definido o nome da acomodação, ou seja, o tipo de quarto que será oferecido 
+para o hospede. Também são definidos as quantidades e tipos de leitos, se há suíte, se há 
+climatização com condicionador de ar e quantas vagas de garagem estão disponíveis. 
+<br>
+ 
+A partir das informações da Tabela 1, o time de desenvolvimento implementou uma classe
+denominada “DiretorSolteiroSimles” – ela está definida no diagrama de classes da Figura 1. Esta 
+classe é responsável por criar acomodações do tipo “Solteiro Simples”. Contudo, o trabalho 
+ainda está incompleto, ainda faltam classes para criar os demais tipos de acomodações. 
+<br>
+ 
+Você ficou responsável por terminar as classes que criam os demais tipos de acomodações e por 
+projetar e desenvolver o controle de hospedagem no software. O controle de hospedagem 
+consiste em registrar quais hospedes estão, atualmente, hospedados no hotel, pousada ou 
+resort. Além disso, em qual tipo de acomodação estes hospedes estão. 
+<br>
+ 
+Para facilitar seu trabalho, você listou as implementações que devem construídas para que o 
+sistema Atlantis, finalmente, seja considerado um produto mínimo viável e possa ser 
+comercializado. 
+<br>
+ 
+As implementações são: 
+<br>
+ 
+• Implementar todas as classes diretoras – responsáveis por criar cada tipo de 
+acomodação. 
+<br>
+ 
+• Implementar as estruturas de dados e a lógica necessárias para controlar a hospedagem, 
+ou seja, poder registar hospedes e vincular estes hospedes a algum tipo de acomodação. 
+<br>
+ <br>
