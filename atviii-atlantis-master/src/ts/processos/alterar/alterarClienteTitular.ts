@@ -21,10 +21,14 @@ export default class AlterarClienteTitular extends Processo {
             let novoNome = this.entrada.receberTexto(`Qual o novo nome do cliente? (${cliente.Nome}) `);
             let novoNomeSocial = this.entrada.receberTexto(`Qual o novo nome social do cliente? (${cliente.NomeSocial}) `);
             let novaDataNascimento = this.entrada.receberData(`Qual a nova data de nascimento do cliente? (${cliente.DataNascimento}) `);
+            let novoHospede = this.entrada.receberNumero(`O cliente está hospedado? (Caso positivo, digite 1) `);
 
             cliente.Nome = novoNome;
             cliente.NomeSocial = novoNomeSocial;
             cliente.DataNascimento = novaDataNascimento;
+
+            if (novoHospede === 1) {cliente.Hospedado = true
+            } else {cliente.Hospedado = false}
 
 
             this.processo = new AlterarEnderecoTitular(cliente);

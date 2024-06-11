@@ -1,6 +1,7 @@
 import Processo from "../../abstracoes/processo";
 import Armazem from "../../dominio/armazem";
 import Cliente from "../../modelos/cliente";
+import CadastrarAcomodacaoCliente from "./cadastrarAcomodacaoCliente";
 import CadastrarDocumentosCliente from "./cadastrarDocumentosCliente";
 import CadastroEnderecoTitular from "./cadastroEnderecoTitular";
 import CadastroTelefoneTitular from "./cadastroTelefoneTitular";
@@ -11,15 +12,20 @@ export default class CadastroClienteTitular extends Processo {
         let nome = this.entrada.receberTexto('Qual o nome do novo cliente?')
         let nomeSocial = this.entrada.receberTexto('Qual o nome social do novo cliente?')
         let dataNascimento = this.entrada.receberData('Qual a data de nascimento?')
-        let cliente = new Cliente(nome, nomeSocial, dataNascimento)
+        let hospede = this.entrada.receberNumero('O cliente está hospedado? (Caso positivo, digite 1) ')
 
+        let cliente = new Cliente(nome, nomeSocial, dataNascimento)
+        
         this.processo = new CadastroEnderecoTitular(cliente)
         this.processo.processar()
-
+        
         this.processo = new CadastroTelefoneTitular(cliente)
         this.processo.processar()
         
         this.processo = new CadastrarDocumentosCliente(cliente)
+        this.processo.processar()
+        
+        this.processo = new CadastrarAcomodacaoCliente(cliente, hospede)
         this.processo.processar()
 
 

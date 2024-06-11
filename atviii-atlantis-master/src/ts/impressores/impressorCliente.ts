@@ -20,16 +20,20 @@ export default class ImpressorCliente implements Impressor {
             + `| Data de nascimento: ${this.cliente.DataNascimento.toLocaleDateString()}\n`
             + `| Data de cadastro: ${this.cliente.DataCadastro.toLocaleDateString()}\n`
             + `| Dependentes: ${this.cliente.Dependentes.length}\n`
-            + `| Acomodação: ${this.cliente.Acomodacao.NomeAcomadacao}`
-
-        this.impressor = new ImpressorEndereco(this.cliente.Endereco)
-        impressao = impressao + `\n${this.impressor.imprimir()}`
-
-        this.impressor = new ImpressorTelefone(this.cliente.Telefones)
-        impressao = impressao + `\n${this.impressor.imprimir()}`
-
-        this.impressor = new ImpressorDocumentos(this.cliente.Documentos)
-        impressao = impressao + `\n${this.impressor.imprimir()}`
+            + `| Hospedado: ${this.cliente.Hospedado.valueOf()}`	
+            
+            if (this.cliente.Hospedado && this.cliente.Acomodacao) {
+                impressao = impressao + `\n| Acomodação: ${this.cliente.Acomodacao.NomeAcomadacao}\n`
+            }
+            
+            this.impressor = new ImpressorEndereco(this.cliente.Endereco)
+            impressao = impressao + `\n${this.impressor.imprimir()}`
+            
+            this.impressor = new ImpressorTelefone(this.cliente.Telefones)
+            impressao = impressao + `\n${this.impressor.imprimir()}`
+            
+            this.impressor = new ImpressorDocumentos(this.cliente.Documentos)
+            impressao = impressao + `\n${this.impressor.imprimir()}`
 
         impressao = impressao + `\n****************************`
         return impressao

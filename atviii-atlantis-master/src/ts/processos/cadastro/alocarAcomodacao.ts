@@ -16,21 +16,23 @@ export default class AlocarAcomodacao extends Processo {
         let nome = this.entrada.receberTexto('Qual o nome do cliente a ser alocado? ')
         let armazem = Armazem.InstanciaUnica
         let cliente = armazem.Clientes.find(cliente => cliente.Nome === nome)
+        let index = 0 
         
         if (cliente) {
             console.log('Cliente encontrado. Alocando acomodação...');
             console.log('----------------------');
 
             this.acomodacoes.forEach(acomodacao => {
-                let index =+1
-                console.log(`${index}}: Nomenclatura: ${acomodacao.NomeAcomadacao.toString()}`)
+                console.log(`${index +=1}: ${acomodacao.NomeAcomadacao.toString()}`)
             }); 
 
             let acomodacaoIndex = this.entrada.receberNumero('Selecione o número da acomodação a ser alocada: ') - 1;
 
             if (acomodacaoIndex >= 0 && acomodacaoIndex < this.acomodacoes.length) {
+
                 let acomodacaoSelecionada = this.acomodacoes[acomodacaoIndex];
                 cliente.Acomodacao = acomodacaoSelecionada
+                cliente.Hospedado = true
                 console.log(`Acomodação "${acomodacaoSelecionada.NomeAcomadacao}" alocada ao cliente "${cliente.Nome}".`);
             } else {
                 console.log('Número de acomodação inválido.');
