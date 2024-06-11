@@ -1,10 +1,9 @@
+
 # ATV IV
 ## Como rodar?
 
-Primeiramente entre nas pastas: 
- - atvi-atlantis-master ,<br>
-   - src
-    - ts
+Primeiramente entre na pasta: 
+ - atviv-atlantis-master ,<br>
 
 Em seguida abra o cmd (prompt de Comando) e digite os seguintes comandos: 
 
@@ -13,19 +12,7 @@ npm install typescript
 ```
 
 ```
-npm install express @types/express typescript ts-node
-```
-
-```
-npm install --save-dev npm-run-all
-```
-
-```
-npx tsc
-```
-
-```
-npm run start
+npm start
 ```
 <br>
 
@@ -101,7 +88,8 @@ esta interface precisa ser amigável, com ótima usabilidade.
  
 Um ponto importante, o protótipo navegável deve contemplar todas as funcionalidades que já 
 existem no sistema CLI, como o CRUD de clientes (hospedes), cadastro de acomodações e 
-registro de hospedagens. 
+registro de hospedagens 
 <br>
+  
 <br>
  
